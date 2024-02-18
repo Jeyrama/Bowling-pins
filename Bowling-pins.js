@@ -37,3 +37,5 @@ function bowlingPins(arr) {
     return char;
   }).join('').split('\n').reverse().join('\n');
 }
+
+// or
