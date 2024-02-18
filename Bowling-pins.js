@@ -22,3 +22,18 @@ Fill the missing pins with a space character ( )
 
 
 // Solution 
+
+function bowlingPins(arr) {
+  let count = 0;
+  let pins = Array.from({length: 4}, (_, i) => {
+    return ' '.repeat(i) + 'I '.repeat(4 - i).trim() + ' '.repeat(i);
+  }).reverse().join('\n');
+  
+  return [...pins].map(char => {
+    if (char === 'I') {
+      count++;
+      if (arr.includes(count)) return ' ';
+    }
+    return char;
+  }).join('').split('\n').reverse().join('\n');
+}
