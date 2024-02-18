@@ -49,3 +49,23 @@ function bowlingPins(arr) {
     
   return pins.join('');
 }
+
+// or
+
+function bowlingPins(arr) {
+  const fields = [
+    [7, ' ', 8, ' ', 9, ' ', 10],
+    [' ', 4, ' ', 5, ' ', 6, ' '],
+    [' ', ' ', 2, ' ', 3, ' ', ' '],
+    [' ', ' ', ' ', 1, ' ', ' ', ' ']
+  ]
+  
+  return fields.map(field => 
+     field.map(pin => {
+      if (typeof pin === 'number') {
+        return arr.includes(pin) ? ' ' : 'I'
+      }
+      return pin
+    }).join('')
+  ).join('\n')
+}
