@@ -39,3 +39,13 @@ function bowlingPins(arr) {
 }
 
 // or
+
+function bowlingPins(arr) {
+  let map = [ -1, 27, 18, 20, 9, 11, 13, 0, 2, 4, 6]
+  ,  pins = "I I I I\n I I I \n  I I  \n   I   ".split('');
+  
+  for (let pos of arr)
+    pins[map[pos]] = ' ';
+    
+  return pins.join('');
+}
