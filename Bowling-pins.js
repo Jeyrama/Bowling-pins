@@ -19,3 +19,6 @@ The pins rows are separated by a newline (\n)
 Each Line must be 7 chars long
 Fill the missing pins with a space character ( )
 */
+
+
+// Solution 
